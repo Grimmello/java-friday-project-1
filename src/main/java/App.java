@@ -18,7 +18,16 @@ public class App{
 								System.out.println(newEvent.mDrinkString);
 								System.out.println(newEvent.mEntertainment);
 								System.out.println(price);
-								newEvent.mStillRunning = false;
+								System.out.println("Do you have a coupon code? If so, enter it below, or type 'Quit' to quit.");
+								String coupon = myConsole.readLine();
+								if (coupon.equals("Quit")) {
+									newEvent.mStillRunning = false;
+								} else if (coupon.equals("Wedding"||"Sister")) {
+									price = price * 0.8
+								} else {
+									System.out.println("Sorry, we didn't recognize your coupon code. Please try again.");
+									String tryAgain = myConsole.readLine();
+								}
 	            } else {
 	              System.out.println("What type of entertainment would you like? Band, DJ, or None?");
 	              String entertainment = myConsole.readLine();
