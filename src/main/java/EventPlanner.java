@@ -26,7 +26,7 @@ public class EventPlanner{
     foodString = foodString.replace("[", "");
     foodString = foodString.replace("]", "");
     mFoodString = foodString;
-    mPrice += 300;
+    mPrice += mNumberOfGuests * 15;
     return foodString;
   }
   public String runDrinks (String input) {
@@ -41,13 +41,18 @@ public class EventPlanner{
   public String runEntertainment (String input) {
     mEntertainment = input;
     if (!mEntertainment.equals("None")) {
-      mPrice += 100;
+      mPrice -= 100;
     }
     return mEntertainment;
   }
   public Integer runPrice() {
     boolean mStillRunning = false;
     return mPrice;
+  }
+  public Float runNewPrice(Float number) {
+    Float percentage = Float.parseFloat("0.8");
+    float newPrice = number * percentage;
+    return newPrice;
   }
   public String runEventName(String input) {
     mNameOfEvent = input;
