@@ -11,7 +11,14 @@ Plan an event in console to build your own event with food, drink, entertainment
 
 ## Specs
 
-![Specs](/img/specs.png)
+| Behavior                   | Input Example            | Output Example          ------:|
+| name event in console----- | input1: name-----:       | event name: name            --:|
+| add guest amount to info-- | input1 + input2: 2       | E.N = name  guests=2        --:|
+| add food item------------- | input1+2+ input3: steak  | E.N=name guests=2         ----:|
+| -------------------------- | -----------------:       | Food= steak          ---------:|
+| add drink type to list---- | input4: Alcoholic:       | "... Type of drink:Alcoholic"-:|
+| add entertainment -------- | input5: Band -----------:| "... Entertainment: Band" ----:|
+| -------------------------- |        -----------------:|              -----------------:|
 
 ## Setup/Installation Requirements
 
